@@ -1,7 +1,9 @@
-"use client"
+"use client";
 import { increaseCounter } from "@/store/actions/homeActions";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { PRODUCTS } from "@/constants/helperApi";
+import ProductCard from "@/components/productCard";
 
 const HomeContainer = () => {
   const dispatch = useDispatch();
@@ -11,8 +13,16 @@ const HomeContainer = () => {
   };
   return (
     <>
-      <div>{counter}</div>
-      <button onClick={handleCounter}>Increment</button>
+      {PRODUCTS?.map((item) => (
+        <ProductCard
+          imageURL={item.imageURL}
+          productName={item.productName}
+          productDescription={item.productDescription}
+          discountedPrice={item.discountedPrice}
+          originalPrice={item.originalPrice}
+          discountedPercentage={item.discountedPercentage}
+        />
+      ))}
     </>
   );
 };
