@@ -4,4 +4,5 @@ export const STRINGS = {
   CART_ICON_ALT_TEXT: "Cart Icon",
   CART_ICON_HEIGHT: 24,
   CART_ICON_WIDTH: 24,
+  ADD_TO_CART: "ADD TO CART",
 };

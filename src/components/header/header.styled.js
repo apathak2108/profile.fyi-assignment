@@ -18,5 +18,4 @@ export const StyledHeaderItemsContainer = styled.main`
   justify-content: space-between;
   font-size: 18px;
   font-weight: 600;
-  font-family: cursive;
 `;

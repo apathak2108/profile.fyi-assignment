@@ -1,20 +1,18 @@
 "use client";
-import { increaseCounter } from "@/store/actions/homeActions";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { PRODUCTS } from "@/constants/helperApi";
 import ProductCard from "@/components/productCard";
+import { StyledHomeContainer } from "./home.styled";
 
 const HomeContainer = () => {
   const dispatch = useDispatch();
-  const counter = useSelector((state) => state?.home?.counter);
-  const handleCounter = () => {
-    dispatch(increaseCounter());
-  };
+
   return (
-    <>
-      {PRODUCTS?.map((item) => (
+    <StyledHomeContainer>
+      {PRODUCTS?.map((item, index) => (
         <ProductCard
+          key={index}
           imageURL={item.imageURL}
           productName={item.productName}
           productDescription={item.productDescription}
@@ -23,7 +21,7 @@ const HomeContainer = () => {
           discountedPercentage={item.discountedPercentage}
         />
       ))}
-    </>
+    </StyledHomeContainer>
   );
 };
 

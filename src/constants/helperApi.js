@@ -4,7 +4,7 @@ export const PRODUCTS = [
     imageURL:
       "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/23158876/2023/10/4/ba6838bf-93c1-47d0-8948-790b3727f5711696415342531-anayna--Anarkali-Pure-Cotton-Kurta-With-Trousers--Dupatta-45-12.jpg",
     productName: "KALANI",
-    productDescription: "Kurta With Duppatta and Lehanga",
+    productDescription: "Kurta With Duppatta",
     discountedPrice: "1690",
     originalPrice: "4890",
     discountedPercentage: "67",
@@ -64,7 +64,7 @@ export const PRODUCTS = [
     imageURL:
       "https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/29443194/2024/5/9/9958bb1a-bef1-4d8c-9d81-87c0ded10f1f1715243277713DILLINGERUnisexVarsityPrintedAppliqueT-shirt1.jpg",
     productName: "DILLINGER",
-    productDescription: "Drop shoulder Unisex T-Shirt",
+    productDescription: "Drop Shoulder T-Shirt",
     discountedPrice: "741",
     originalPrice: "1399",
     discountedPercentage: "47",

@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  StyledAddToCardButton,
   StyledDiscountedPrice,
   StyledProductCardContainer,
   StyledProductDescription,
@@ -10,6 +11,7 @@ import {
   StyledProductOriginalPrice,
   StyledProductPriceContainer,
 } from "./productCard.styled";
+import { STRINGS } from "@/constants";
 
 const ProductCard = ({
   imageURL,
@@ -18,6 +20,7 @@ const ProductCard = ({
   discountedPrice,
   originalPrice,
   discountedPercentage,
+  addToCardClick,
 }) => {
   return (
     <StyledProductCardContainer>
@@ -43,6 +46,9 @@ const ProductCard = ({
           </span>
         </StyledProductPriceContainer>
       </StyledProductInfoContainer>
+      <StyledAddToCardButton onClick={addToCardClick}>
+        {STRINGS.ADD_TO_CART}
+      </StyledAddToCardButton>
     </StyledProductCardContainer>
   );
 };

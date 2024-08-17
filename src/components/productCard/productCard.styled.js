@@ -2,16 +2,19 @@ import Image from "next/image";
 import styled from "styled-components";
 
 export const StyledProductCardContainer = styled.article`
-  height: 359px;
+  height: 383px;
   background-color: white;
   margin: 10px;
   width: 210px;
   transition: transform 0.2s ease-in;
+  border: 1px solid grey;
+  
   &:hover {
     transform: scale(1.01);
     box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
     cursor: pointer;
   }
+
   @media (min-width: 360px) and (max-width: 768px) {
     width: calc(50% - 10px);
     margin: 0 0 1px 0;
@@ -69,4 +72,21 @@ export const StyledDiscountedPrice = styled.span`
   font-weight: 400;
   font-size: 12px;
   margin-left: 5px;
+`;
+
+export const StyledAddToCardButton = styled.div`
+  height: 36px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  margin-top: -12px;
+  background-color: #2874f0;
+
+  &:hover {
+    background-color: #1f5dc2;
+  }
 `;
