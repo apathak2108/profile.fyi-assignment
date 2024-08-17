@@ -13,4 +13,12 @@ export const StyledChildrenLayout = styled.main`
   top: 64px;
   height: calc(100vh - 64px);
   width: 100%;
+  overflow-y: scroll; 
+
+  // @media (max-width: 768px) {
+  //   top: 72px;
+  //   row-gap: 8px;
+  //   column-gap: 2%;
+  //   padding-bottom: 12px;
+  // }
 `;
