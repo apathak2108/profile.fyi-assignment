@@ -1,16 +1,22 @@
-import { INCREASE_COUNTER } from "../actionTypes";
+import {
+  SET_IS_PRODUCT_OPEN,
+  SET_SELECTED_PRODUCT_ITEM_ID,
+} from "../actionTypes";
 
 const initialState = {
-  counter: 0,
+  selectedProductId: "",
+  isProductOpen: false,
 };
 
 export const homeReducer = (state = initialState, action) => {
   switch (action.type) {
-    case INCREASE_COUNTER:
+    case SET_SELECTED_PRODUCT_ITEM_ID:
       return {
         ...state,
-        counter: state.counter + 1,
+        selectedProductId: action.payload,
       };
+    case SET_IS_PRODUCT_OPEN:
+      return { ...state, isProductOpen: action.payload };
     default:
       return state;
   }

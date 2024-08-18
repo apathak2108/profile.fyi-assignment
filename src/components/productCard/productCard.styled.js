@@ -75,7 +75,7 @@ export const StyledDiscountedPrice = styled.span`
 `;
 
 export const StyledAddToCardButton = styled.div`
-  height: 36px;
+  height: 33px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -85,8 +85,9 @@ export const StyledAddToCardButton = styled.div`
   color: #fff;
   margin-top: -12px;
   background-color: #2874f0;
+  z-index: 1;
 
-  &:hover {
+  &:hover
     background-color: #1f5dc2;
   }
 `;
