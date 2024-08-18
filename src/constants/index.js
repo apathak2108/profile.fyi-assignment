@@ -18,6 +18,8 @@ export const STRINGS = {
   SELECT_SIZE: "SELECT SIZE",
   SELECT_SIZE_ERROR: "Please select size",
   UNSELECTED_PRODUCT_ERROR: "Please select the product in home page",
+  DELETE_CART_ITEM_CONFIRMATION:
+    "Are you sure you want to remove this item from the cart?",
 };
 
 export const PRODUCT_SPECS = [
@@ -33,4 +35,5 @@ export const PRODUCT_SPECS = [
 
 export const SIZES = ["S", "M", "L", "XL", "XXL"];
 
-export const CROSS_ICON = "https://img.icons8.com/?size=100&id=21067&format=png&color=000000";
+export const CROSS_ICON =
+  "https://img.icons8.com/?size=100&id=21067&format=png&color=000000";

@@ -1,4 +1,5 @@
 import {
+  REMOVE_CART_ITEM,
   SET_CART_ITEMS_TO_CHECKOUT,
   SET_SELECTED_QUANTITY,
 } from "../actionTypes";
@@ -25,6 +26,13 @@ const checkoutReducer = (state = initialState, action) => {
           ...state.selectedQuantities,
           [action.payload.productId]: action.payload.quantity,
         },
+      };
+    case REMOVE_CART_ITEM:
+      return {
+        ...state,
+        cartProductIds: state.cartProductIds.filter(
+          (id) => id !== action.payload
+        ),
       };
     default:
       return state;

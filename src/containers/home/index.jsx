@@ -5,8 +5,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { PRODUCTS } from "@/constants/helperApi";
 import ProductCard from "@/components/productCard";
 import { StyledHomeContainer } from "./home.styled";
-import { setIsProductOpen, setSelectedProductId } from "@/store/actions/homeActions";
+import {
+  setIsProductOpen,
+  setSelectedProductId,
+} from "@/store/actions/homeActions";
 import { setCartItemsToCheckout } from "@/store/actions/checkoutActions";
+import { toast } from "react-toastify";
 
 const HomeContainer = () => {
   const dispatch = useDispatch();
@@ -18,6 +22,9 @@ const HomeContainer = () => {
   };
   const handleAddToCartClick = (productId) => {
     dispatch(setCartItemsToCheckout(productId));
+    toast.success("Product added to cart!", {
+      autoClose: 1500,
+    });
   };
   return (
     <StyledHomeContainer>
