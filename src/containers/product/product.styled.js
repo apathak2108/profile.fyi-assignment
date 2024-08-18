@@ -9,7 +9,7 @@ export const StyledProductContainer = styled.main`
 `;
 
 export const StyledProductImageContainer = styled.section`
-  width: 60%;
+  width: 55%;
   margin: 1rem;
 
   @media (max-width: 768px) {
@@ -20,8 +20,8 @@ export const StyledProductImageContainer = styled.section`
 `;
 
 export const StyledProductDescriptionContainer = styled.section`
-  width: 62%;
-  margin: 15px 15px 15px 0;
+  width: 60%;
+  margin: 15px 0;
 
   @media (max-width: 768px) {
     width: 98%;
@@ -29,19 +29,18 @@ export const StyledProductDescriptionContainer = styled.section`
 `;
 
 export const StyledProductImage = styled.img`
-  height: 100%;
-  width: 100%;
+  height: 510px;
 `;
 
 export const StyledProductDetailsContainer = styled.article`
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 90%;
 `;
 
 export const StyledProductSpecsContainer = styled.article`
-  height: 95%;
   margin-top: 15px;
   width: 40%;
+  margin-left: 22px;
 `;
 
 export const StyledPrimaryHeading = styled.h1`
@@ -111,10 +110,16 @@ export const StyledSizeButton = styled.div`
   color: #282c3f;
   width: 50px;
   height: 50px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ${(props) =>
+    props.selected &&
+    `color: #2874f0;
+     border-color: #2874f0;`}
   &:hover {
-    border: 1px solid #ff3f6c;
-    color: #ff3f6c;
+    border: 1px solid #2874f0;
+    color: #2874f0;
     cursor: pointer;
   }
 `;
@@ -122,7 +127,7 @@ export const StyledSizeButton = styled.div`
 export const StyledAddToCartButton = styled.div`
   margin-top: 30px;
   margin-left: 10px;
-  background-color: #ff3e6c;
+  background-color: #2874f0;
   border: none;
   color: #fff;
   font-weight: 700;
@@ -137,7 +142,7 @@ export const StyledAddToCartButton = styled.div`
 
   &:hover {
     cursor: pointer;
-    background-color: #f75b80;
+    background-color: #1e5dc2;
   }
 `;
 
@@ -148,3 +153,19 @@ export const StyledProductExtraDetailsContainer = styled.article`
   margin-left: 10px;
 `;
 
+export const StyledSpecsText = styled.p`
+  margin: 0;
+  margin-left: 10px;
+  margin-bottom: 2px;
+`;
+
+export const StyledErrorMessage = styled.span`
+  color: #f16565;
+  font-size: 14px;
+  margin-left: 10px;
+`;
+
+export const StyledUnselectedProductError = styled.h3`
+  margin: auto;
+  margin-top: 24px;
+`;

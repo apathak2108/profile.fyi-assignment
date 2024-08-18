@@ -21,31 +21,34 @@ const ProductCard = ({
   originalPrice,
   discountedPercentage,
   addToCardClick,
+  onClick,
 }) => {
   return (
     <StyledProductCardContainer>
-      <StyledProductImage src={imageURL} alt={productName} />
-      <StyledProductInfoContainer>
-        <StyledProductName>{productName}</StyledProductName>
-        <StyledProductDescription>
-          {productDescription}
-        </StyledProductDescription>
-        <StyledProductPriceContainer>
-          <span>
-            <StyledProductDiscountedPrice>
-              ₹{discountedPrice}
-            </StyledProductDiscountedPrice>
-            <StyledProductOriginalPrice>
-              ₹{originalPrice}
-            </StyledProductOriginalPrice>
-          </span>
-          <span>
-            <StyledDiscountedPrice>
-              {discountedPercentage} % OFF
-            </StyledDiscountedPrice>
-          </span>
-        </StyledProductPriceContainer>
-      </StyledProductInfoContainer>
+      <div onClick={onClick}>
+        <StyledProductImage src={imageURL} alt={productName} />
+        <StyledProductInfoContainer>
+          <StyledProductName>{productName}</StyledProductName>
+          <StyledProductDescription>
+            {productDescription}
+          </StyledProductDescription>
+          <StyledProductPriceContainer>
+            <span>
+              <StyledProductDiscountedPrice>
+                ₹{discountedPrice}
+              </StyledProductDiscountedPrice>
+              <StyledProductOriginalPrice>
+                ₹{originalPrice}
+              </StyledProductOriginalPrice>
+            </span>
+            <span>
+              <StyledDiscountedPrice>
+                {discountedPercentage} % OFF
+              </StyledDiscountedPrice>
+            </span>
+          </StyledProductPriceContainer>
+        </StyledProductInfoContainer>
+      </div>
       <StyledAddToCardButton onClick={addToCardClick}>
         {STRINGS.ADD_TO_CART}
       </StyledAddToCardButton>
