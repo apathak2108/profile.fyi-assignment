@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   StyledCheckoutProductContainer,
   StyledCheckoutProductDescription,
@@ -14,14 +14,21 @@ const CheckoutProduct = ({
   imageURL,
   productName,
   productDescription,
-  size,
   originalPrice,
   discountedPercentage,
   discountedPrice,
   deleteOnClick,
   handleQuantityChange,
-  selectedQuantity, 
+  quantity,
 }) => {
+  const [selectedQuantity, setSelectedQuantity] = useState(quantity || 1);
+
+  const onQuantityChange = (e) => {
+    const newQuantity = parseInt(e.target.value, 10);
+    setSelectedQuantity(newQuantity);
+    handleQuantityChange(newQuantity);
+  };
+
   return (
     <StyledCheckoutProductContainer>
       <StyledCheckoutProductImage src={imageURL} alt={productName} />
@@ -34,11 +41,8 @@ const CheckoutProduct = ({
           Quantity:{" "}
           <StyledCheckoutProductQuantitySelector
             value={selectedQuantity}
-            onChange={handleQuantityChange}
+            onChange={onQuantityChange}
           >
-            <option value="" disabled>
-              Select Quantity
-            </option>
             {[...Array(10).keys()].map((_, index) => (
               <option key={index + 1} value={index + 1}>
                 {index + 1}
@@ -46,7 +50,7 @@ const CheckoutProduct = ({
             ))}
           </StyledCheckoutProductQuantitySelector>
         </label>
-        <span>Size: {size}</span>
+        <span>Size: L</span>
         <span>
           Payable Amount: <s>₹{originalPrice}</s>
           {"  "} <strong>₹{discountedPrice}</strong>

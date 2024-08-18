@@ -81,7 +81,7 @@ export const StyledAddToCardButton = styled.div`
   align-items: center;
   justify-content: center;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
   margin-top: -12px;
   background-color: #2874f0;

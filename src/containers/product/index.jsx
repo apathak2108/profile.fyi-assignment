@@ -28,6 +28,7 @@ import { setSelectedSizeToCheckout } from "@/store/actions/productActions";
 import { PRODUCT_SPECS, SIZES, STRINGS } from "@/constants";
 import { setCartItemsToCheckout } from "@/store/actions/checkoutActions";
 import { useRouter } from "next/router";
+import { toast } from "react-toastify";
 
 const ProductContainer = () => {
   const dispatch = useDispatch();
@@ -48,6 +49,9 @@ const ProductContainer = () => {
   };
   const handleAddToCart = () => {
     if (selectedSize) {
+      toast.success("Product added to cart!", {
+        autoClose: 1500,
+      });
       setErrorMessage("");
       dispatch(setCartItemsToCheckout(selectedProductId));
       router.push("/checkout");

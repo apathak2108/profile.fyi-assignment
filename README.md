@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+**Screenshots of Web View**
 
-## Getting Started
+![Home Page Screenshot](https://i.postimg.cc/1tF5vLDY/localhost-3000-home.png)
 
-First, run the development server:
+![PDP Page Screenshot](https://i.postimg.cc/C5HMgkPG/localhost-3000-product.png)
+
+![Checkout Page Screenshot](https://i.postimg.cc/zDnGKYzy/localhost-3000-checkout.png)
+
+
+## To run the project on your machine, follow the given steps:-
+
+1. **Install Git**: Ensure that Git is installed on your machine. If not, do it by the following link:
+   https://git-scm.com/downloads
+
+2. **Open a Terminal or Command Prompt**: Access your terminal (macOS/Linux) or command prompt (Windows). You can also use Git Bash if you’re on Windows.
+
+3. **Navigate to the Desired Directory**: Change to the directory where you want to clone the repository. Use the "cd" command to navigate. For example:
+
+```bash
+cd path/to/your/directory
+```
+
+4. **Clone the Repository**: Use the `git clone` command followed by the given repository URL:
+   https://github.com/apathak2108/profile.fyi-assignment.git
+
+5. **Enter the Project Directory**: After cloning, navigate into the cloned repository's directory by entering given command:
+   cd your-repo-name
+
+## Running the Project
+
+After cloning the repository, follow these steps to set up and run the React project locally:
+
+6. **Install Dependencies**: Navigate to the project directory and install the necessary dependencies:
+
+```bash
+npm install
+```
+
+7. **Start the Development Server**: Run the following command to start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now the project will run on http://localhost:3000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Additional Information
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Styling
 
-## Learn More
+This project uses a combination of styling methods:
 
-To learn more about Next.js, take a look at the following resources:
+- **Styled-Components**: I have used [styled-components](https://styled-components.com/) for component-level styling. It allows writing CSS in JavaScript and ensures styles are scoped to components.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Vanilla CSS**: Some global styles and layout-related CSS are written using traditional CSS. This is used for styles that apply across multiple components or for legacy styles.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### State Management
 
-## Deploy on Vercel
+- **Redux**: The application uses [Redux](https://redux.js.org/) for state management. Redux is set up in the `src/store` directory, with reducers combined in `rootReducer.js`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Actions and Reducers**: Defined in the `src/redux` directory. Each module has its own slice.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Usage**: Components use `useDispatch` and `useSelector` hooks from `react-redux`.
