@@ -60,6 +60,6 @@ This project uses a combination of styling methods:
 
 - **Redux**: The application uses [Redux](https://redux.js.org/) for state management. Redux is set up in the `src/store` directory, with reducers combined in `rootReducer.js`.
 
-- **Actions and Reducers**: Defined in the `src/redux` directory. Each module has its own slice.
+- **Actions and Reducers**: Defined in the `src/redux` directory. 
 
 - **Usage**: Components use `useDispatch` and `useSelector` hooks from `react-redux`.
